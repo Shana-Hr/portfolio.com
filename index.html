@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dilshan Rathnayake | Run</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="game">
+<div class="top"><h1>DILSHAN RATHNAYAKE · RUN</h1></div>
+<button id="menu-btn" type="button" aria-label="Open menu">MENU</button>
+
+<div id="stage">
+<div id="w">
+  <canvas id="g" width="480" height="270" aria-label="Endless run game"></canvas>
+  <div id="dlg" hidden><b id="dlg-t">BADGE</b><span id="tx"></span></div>
+  <div id="over" hidden>
+    <b>GAME OVER</b>
+    <p id="final"></p>
+    <button id="retry" type="button">▶ RESTART</button>
+  </div>
+</div>
+</div>
+
+<div id="badges">
+  <div class="bslots">
+    <div class="bslot"><img alt="Badge 1"></div>
+    <div class="bslot"><img alt="Badge 2"></div>
+    <div class="bslot"><img alt="Badge 3"></div>
+  </div>
+  <div class="bcount"><span id="count">0/3</span><small>BADGES</small><div class="bprog"><i></i></div></div>
+</div>
+
+<p id="msg"></p>
+
+<div id="pad">
+  <button id="bJump" type="button" aria-label="Jump">▲ JUMP</button>
+  <div class="row3">
+    <button id="bDuck" type="button" aria-label="Duck (hold)">↓ DUCK</button>
+    <button id="restart" type="button" aria-label="Restart game">↻ RESTART</button>
+    <a class="btnl" id="skip" href="quick.html">▤ QUICK VIEW</a>
+  </div>
+</div>
+
+<div id="start" role="dialog" aria-modal="true" aria-labelledby="st-t">
+  <div class="st-card">
+    <canvas id="st-av" width="24" height="24" aria-hidden="true"></canvas>
+    <h2 id="st-t">Dilshan Rathnayake</h2>
+    <p class="st-intro">Apps &amp; Web Developer · Sri Lanka</p>
+    <p>Want to play the game, or just see the details quickly?</p>
+    <button id="st-play" type="button">▶ PLAY THE GAME</button>
+    <a id="st-stay" href="quick.html">No time to play? Quick view →</a>
+  </div>
+</div>
+
+<script src="avatar.js"></script>
+<script src="badges.js"></script>
+<script src="game.js"></script>
+<script>
+(()=>{const ST=document.getElementById('start');
+  const close=()=>{ST.hidden=true};
+  ST.hidden=false;
+  document.getElementById('st-play').addEventListener('click',close);
+  document.getElementById('menu-btn').addEventListener('click',()=>{ST.hidden=false});
+  ST.addEventListener('click',e=>{if(e.target===ST)close()});
+  addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+  if(location.hash==='#play')close();
+})();
+</script>
+</body>
+</html>
