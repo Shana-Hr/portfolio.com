@@ -8,12 +8,12 @@
     { "name": "WEB (HTML/CSS/JS)", "level": 90 },
     { "name": "ANDROID APPS", "level": 85 },
     { "name": "FIREBASE", "level": 80 },
-    { "name": "PIXEL / RETRO UI", "level": 88 },
+    { "name": "JAVA APPS", "level": 88 },
     { "name": "LUA (AndLua+)", "level": 75 }
   ],
   "projects": [
     {
-      "title": "ShipTix Control Center",
+      "title": "FLUXOR",
       "desc": "Single-file admin dashboard with a full control panel for managing orders and tickets.",
       "image": "images/projects/shiptix.png",
       "tags": ["WEB", "ADMIN"],
@@ -64,8 +64,8 @@
   ],
   "achievements": ["FIRST STEP", "APP BUILDER", "WEB MASTER"],
   "contact": {
-    "email": "shana@example.com",
-    "github": "https://github.com/example",
-    "whatsapp": "https://wa.me/94700000000"
+    "email": "userdilshan01@gmail.com",
+    "github": "https://github.com/Shana-Hr",
+    "whatsapp": "https://wa.me/94728449242"
   }
 }
